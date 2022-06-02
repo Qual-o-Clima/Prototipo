@@ -11,10 +11,10 @@
 #include <ESP8266WiFi.h>
 #include <ThingsBoard.h>
 
-#define WIFI_AP "motoe"
-#define WIFI_PASSWORD "12345678"
+#define WIFI_AP "Familia Nascimento"
+#define WIFI_PASSWORD "84273422"
 
-#define TOKEN "Z8HdSYLpoEia5WIZWJNo"
+#define TOKEN "5Wv4SDuqQfoVjH4RKr2Q"
 
 // DHT
 #define DHTPIN D2
@@ -47,7 +47,7 @@ void loop()
     reconnect();
   }
 
-  if ( millis() - lastSend > 1000 ) { // Update and send only after 1 seconds
+  if ( millis() - lastSend > 3600000 ) { // Update and send only after 1 seconds
     getAndSendTemperatureAndHumidityData();
     lastSend = millis();
   }
